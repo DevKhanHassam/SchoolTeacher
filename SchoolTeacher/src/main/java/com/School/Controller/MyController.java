@@ -41,7 +41,7 @@ public class MyController {
 		return "b";
 	}
 	
-//	test
+//	Github test
 	@RequestMapping(value ="/showstudent", method = RequestMethod.GET)
 	public String a(Model m)
 	{
