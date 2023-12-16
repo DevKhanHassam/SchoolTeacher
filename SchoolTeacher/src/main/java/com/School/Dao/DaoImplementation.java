@@ -46,7 +46,7 @@ public class DaoImplementation implements Dao {
 		
 		String query="select * from students where id = ?";
 		Student updateStudentData = jdbcTemplate.queryForObject(query, new StudentRowMapper(), id);
-	
+//	
 		return updateStudentData;
 	}
 
