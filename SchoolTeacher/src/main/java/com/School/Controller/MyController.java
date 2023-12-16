@@ -79,7 +79,7 @@ public class MyController {
 	
 	
 	String newstudent;
-	@PostMapping("/newstudentadded")
+	@PostMapping("/newstudentadded")// dtostudent mei data binding hogai hai hai hum ny url k through isme data bind krdiya hai from form
 	public String newstudentadded(DtoStudent dtostudent)
 	{
 		serviceImp.insertStudentData(dtostudent);
