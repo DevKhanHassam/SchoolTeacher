@@ -11,4 +11,5 @@ public List<Student> showStudent();
 	
 	public String insertStudentData(DtoStudent dtostudent);
 	public Student  giveStudentObject(int id);
+	public void updateStudent(DtoStudent dtostudent);
 }

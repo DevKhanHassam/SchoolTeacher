@@ -42,12 +42,19 @@ public class DaoImplementation implements Dao {
 
 	@Override
 	public Student giveStudentObject(int id) {
-		// TODO Auto-generated method stub
+		
 		
 		String query="select * from students where id = ?";
 		Student updateStudentData = jdbcTemplate.queryForObject(query, new StudentRowMapper(), id);
 	
 		return updateStudentData;
+	}
+
+	@Override
+	public void updateStudent(DtoStudent dtostudent) {
+		
+		String query="UPDATE STUDENTS SET name=?, mobile=?, country=? WHERE id=?";
+		jdbcTemplate.update(query,dtostudent.getName(),dtostudent.getMobile(),dtostudent.getCountry(),dtostudent.getId());
 	}
 
 	

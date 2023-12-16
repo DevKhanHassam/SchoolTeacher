@@ -82,7 +82,16 @@ public class MyController {
 	@PostMapping("/newstudentadded")// dtostudent mei data binding hogai hai hai hum ny url k through isme data bind krdiya hai from form
 	public String newstudentadded(DtoStudent dtostudent)
 	{
-		serviceImp.insertStudentData(dtostudent);
+		if(dtostudent.getId()==0)
+		{
+			serviceImp.insertStudentData(dtostudent);
+		}
+		
+		else
+		{
+			serviceImp.updateStudent(dtostudent);
+		}
+		
 		newstudent=dtostudent.getName();
 		return "redirect:/thankyou";
 		

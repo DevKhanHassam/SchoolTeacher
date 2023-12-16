@@ -12,6 +12,9 @@
 <h3>ADD NEW STUDENT</h3>
 
 <form:form action="newstudentadded" modelAttribute="studentData" method="POST">
+
+<form:hidden path="id"/>
+<br>
 <label for="n">Name</label>
 <form:input path="name" id="n"/>
 <br>

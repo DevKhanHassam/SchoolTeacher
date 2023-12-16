@@ -3,6 +3,7 @@ package com.School.Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.School.Dao.DaoImplementation;
@@ -34,6 +35,12 @@ public class ServiceImp implements Service {
 		
 		Student giveStudentObject = di.giveStudentObject(id);
 		return giveStudentObject;
+	}
+
+	public void updateStudent(DtoStudent dtostudent) {
+		
+		di.updateStudent(dtostudent);
+		
 	}
 
 }

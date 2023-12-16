@@ -14,4 +14,6 @@ public interface Dao {
 	
 	public Student  giveStudentObject(int id);
 	
+	public void updateStudent(DtoStudent dtostudent);
+	
 }
