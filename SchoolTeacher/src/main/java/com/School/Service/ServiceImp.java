@@ -43,4 +43,9 @@ public class ServiceImp implements Service {
 		
 	}
 
+	public void delete_student(int id) {
+		
+		di.delete_student(id);
+	}
+
 }

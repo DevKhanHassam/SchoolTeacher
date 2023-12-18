@@ -57,6 +57,13 @@ public class DaoImplementation implements Dao {
 		jdbcTemplate.update(query,dtostudent.getName(),dtostudent.getMobile(),dtostudent.getCountry(),dtostudent.getId());
 	}
 
+	public void delete_student(int id) {
+		
+		String query="DELETE FROM students WHERE id = ?";
+		jdbcTemplate.update(query, id);
+		
+	}
+
 	
 
 

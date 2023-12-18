@@ -104,4 +104,11 @@ public class MyController {
 		return "thankyou";
 	}
 	
+	@RequestMapping("delete_student")
+	public String delete_Student(@RequestParam("id") int id)
+	{
+		serviceImp.delete_student(id);
+		return "redirect:/showstudent";
+	}
+	
 }

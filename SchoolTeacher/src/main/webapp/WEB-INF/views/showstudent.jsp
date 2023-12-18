@@ -20,6 +20,7 @@
 				<th>Mobile</th>
 				<th>Country</th>
 				<th>Update</th>
+				<th>Delete</th>
 			</tr>
 
 			<c:forEach var="TempStudent" items="${showStudent}">
@@ -29,7 +30,9 @@
 					<td>${TempStudent.name}</td>
 					<td>${TempStudent.mobile}</td>
 					<td>${TempStudent.country}</td>
-					<td> <a href="update_student?id=${TempStudent.id} ">Update</a></td>
+					<td><a href="update_student?id=${TempStudent.id} ">Update</a></td>
+					<td><a href="delete_student?id=${TempStudent.id}"
+						onclick="if(!(confirm('Are you sure to delete ${TempStudent.name} data?'))) return false">Delete</a></td>
 				</tr>
 
 
